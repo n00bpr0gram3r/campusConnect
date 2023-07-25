@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --purple: rgb(255, 155, 255) !important;
+    --gray: gray !important;
+    --primary-bg-color: rgb(0, 1, 39) !important;
+    --secondary-bg-color: rgb(0, 1, 56) !important;
+}
+.purple{
+    color: var(--purple);
+}
+.primary-bg-color{
+    color: var(--primary-bg-color);
+}
+.gray{
+    color: var(--gray);
+}
+.secondary-bg-color{
+    color: var(--secondary-bg-color);
+}
+
+body {
+   background-color: var(--primary-bg-color) !important;
+    font-family: 'Poppins', sans-serif !important;
+    color: white !important;
+    scroll-behavior: smooth;
+}

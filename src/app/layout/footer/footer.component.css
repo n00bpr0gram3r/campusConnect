@@ -1,0 +1,15 @@
+footer{
+    background: linear-gradient(rgba(0, 1, 56, 0.336), rgba(0, 1, 56, 0.336));
+}
+
+.imp-links>a{
+    /* background-color: var(--secondary-bg-color) !important; */
+    font-size: smaller;
+}
+
+.imp-links>a:hover{
+    color: var(--purple);
+}
+.bottom{
+    font-size: smaller;
+}

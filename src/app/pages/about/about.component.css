@@ -1,0 +1,8 @@
+.about-me>h1{
+    text-decoration: underline;
+    text-decoration-color: var(--purple);
+}
+.goal-vision{
+    text-decoration: underline;
+    text-decoration-color: var(--purple);
+}
