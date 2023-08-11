@@ -1,4 +1,8 @@
-.contact-technology>h1{
+h1{
     text-decoration: underline;
     text-decoration-color: var(--purple);
+}
+
+#social-list>a:hover{
+    color: var(--purple);
 }
