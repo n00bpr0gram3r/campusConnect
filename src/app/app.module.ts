@@ -10,6 +10,7 @@ import { StudentsComponent } from './pages/students/students.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { ForgetComponent } from './pages/forget/forget.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
     StudentsComponent,
     AboutComponent,
     ContactUsComponent,
+    ForgetComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,6 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,ForgetComponent]
 })
 export class AppModule { }

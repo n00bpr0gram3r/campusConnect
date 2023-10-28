@@ -1,1 +1,32 @@
-<p>students works!</p>
+<div class="container-fluid" style="margin-top: 6rem; height: 63vh;">
+    <div class="students-login container-fluid">
+        <h1 class="text-center">Login</h1>
+    </div>
+    <div class="container my-5 d-flex justify-content-center align-items-center">
+        <form>
+            <div class="mb-3 mb-lg-5 row">
+                <label for="inputName" class="col-4 col-form-label">User Name</label>
+                <div class="col-6">
+                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="abc@mail.com">
+                </div>
+            </div>
+            <div class="mb-3 mb-lg-5 row">
+                <label for="inputName" class="col-4 col-form-label">Password</label>
+                <div class="col-6">
+                    <input type="password" class="form-control" name="inputPass" id="inputPass"
+                        placeholder="*****************">
+                </div>
+            </div>
+            <div class="mb-3 mb-lg-5 row">
+                <div class="offset-sm-5">
+                    <a routerLink="/forget">forget password</a>
+                </div>
+            </div>
+            <div class="mb-3 mb-lg-5 row">
+                <div class="offset-sm-4 col-sm-8">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
