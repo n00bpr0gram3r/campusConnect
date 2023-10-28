@@ -11,6 +11,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { ForgetComponent } from './pages/forget/forget.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { ToastrModule } from 'ngx-toastr';
+import {ReactiveFormsModule} from '@angular/forms'
+import {HttpClient, HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -23,11 +27,15 @@ import { ForgetComponent } from './pages/forget/forget.component';
     AboutComponent,
     ContactUsComponent,
     ForgetComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
     NgxTypedJsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot(),
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent,ForgetComponent]

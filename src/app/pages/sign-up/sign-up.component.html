@@ -1,0 +1,46 @@
+<div class="container-fluid" style="margin-top: 6rem;">
+    <div class="students-login container-fluid">
+        <h1 class="text-center">SignUp</h1>
+    </div>
+    <div class="container my-5 d-flex justify-content-center align-items-center">
+        <form [formGroup]="registerForm" (ngSubmit)="registration()">
+            <div class="mb-3 mb-lg-5 row">
+                <label for="inputUserName" class="col-4 col-form-label">User Name</label>
+                <div class="col-7">
+                    <input type="text" class="form-control" formControlName="id" placeholder="User Name">
+                </div>
+            </div>
+            <div class="mb-3 mb-lg-5 row">
+                <label for="inputName" class="col-4 col-form-label">Name</label>
+                <div class="col-7">
+                    <input type="text" class="form-control" formControlName="name" placeholder="Full Name">
+                </div>
+            </div>
+            <div class="mb-3 mb-lg-5 row">
+                <label for="inputEmail" class="col-4 col-form-label">Email</label>
+                <div class="col-7">
+                    <input type="email" class="form-control" formControlName="email" placeholder="email@mail.com">
+                </div>
+            </div>
+            <div class="mb-3 mb-lg-3 row">
+                <label for="inputName" class="col-4 col-form-label">Password</label>
+                <div class="col-7">
+                    <input type="password" class="form-control" formControlName="password"
+                        placeholder="*****************">
+                </div>
+            </div>
+            <div class="mb-3 mb-lg-3 col-4 offset-5">
+                <select class="form-select col-5" name="Gender" id="Gender" formControlName="gender"> 
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="mb-3 mb-lg-5 row">
+                <div class="offset-sm-4 col-sm-8">
+                    <button type="submit" class="btn btn-primary">SignUp</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
