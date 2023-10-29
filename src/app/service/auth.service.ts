@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  baseAPI = 'https://json-server-campus-connect-4lq0vydhh-n00bpr0gram3r.vercel.app/users'
+  baseAPI = 'https://campus-connect-json-server.onrender.com/users'
   constructor(private http: HttpClient) { }
 
   //All User 
