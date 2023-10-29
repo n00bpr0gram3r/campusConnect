@@ -30,7 +30,7 @@ export class SignUpComponent {
         this.route.navigate(['login'])
       }))
     } else {
-      this.toastr.warning('Please Enter Valid Details.')
+      this.toastr.error('Please Enter Valid Details.')
     }
   }
 }

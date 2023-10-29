@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  baseAPI = 'https://json-server-campus-connect-4lq0vydhh-n00bpr0gram3r.vercel.app/users'
+  baseAPI = 'https://campus-connect-json-server.onrender.com/users'
   constructor(private http: HttpClient) { }
 
   //All User 
@@ -24,5 +24,15 @@ export class AuthService {
   //Update User Data
   updateData(id:any, inputdata:any){
     return this.http.put(this.baseAPI+'/'+id,inputdata)
+  }
+
+  //Get username to validate login
+  isLoggedIn(){
+    return sessionStorage.getItem('username')!=null
+  }
+
+  //Get role to validate the permissons
+  getUserRole(){
+    return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():''
   }
 }

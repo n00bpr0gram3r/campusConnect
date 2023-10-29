@@ -3,17 +3,17 @@
         <h1 class="text-center">Login</h1>
     </div>
     <div class="container my-5 d-flex justify-content-center align-items-center">
-        <form>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
             <div class="mb-3 mb-lg-5 row">
                 <label for="inputName" class="col-4 col-form-label">User Name</label>
                 <div class="col-6">
-                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="abc@mail.com">
+                    <input type="text" class="form-control" formControlName="username" name="inputName" id="inputName" placeholder="abc@mail.com">
                 </div>
             </div>
             <div class="mb-2 mb-lg-2 row">
                 <label for="inputName" class="col-4 col-form-label">Password</label>
                 <div class="col-6">
-                    <input type="password" class="form-control" name="inputPass" id="inputPass"
+                    <input type="password" class="form-control" formControlName="password" name="inputPass" id="inputPass"
                         placeholder="*****************">
                 </div>
             </div>
