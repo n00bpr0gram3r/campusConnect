@@ -36,16 +36,20 @@ export class AdminComponent {
     })
   }
 
-  updateData(id: any) {
-    // this.auth.updateData
-    console.log(id)
-    this.dialog.open(UpdateComponent),{
-      EnterAnimationDuration:'1000ms',
-      ExitAnimationDuration:'1000ms',
-      // width:'50%',
+  updateData(code: any) {
+   this.openDialog('1000ms','600ms',code)
+  }
+
+  openDialog(enteranimation:any,exitanimation:any,code:any){
+    const popup = this.dialog.open(UpdateComponent,{
+      enterAnimationDuration:enteranimation,
+      exitAnimationDuration:exitanimation,
+      // width:'20%',
       data:{
-        usercode:id
+        usercode:code
       }
-    }
+    });
+    popup.afterClosed().subscribe(res=>{
+    })
   }
 }
