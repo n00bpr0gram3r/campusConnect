@@ -5,9 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  // baseAPI = 'https://campusconnect-json-server.onrender.com/users'
-  baseAPI = 'http://localhost:3000/users'
-  roleAPI='http://localhost:3000/role'
+  baseAPI = 'https://campusconnect-json-server.onrender.com/users'
+  // baseAPI = 'http://localhost:3000/users'
+  // roleAPI='http://localhost:3000/role'
+  roleAPI = 'https://campusconnect-json-server.onrender.com/role'
   constructor(private http: HttpClient) { }
 
   //All User 
