@@ -13,9 +13,22 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
 import { ForgetComponent } from './pages/forget/forget.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ToastrModule } from 'ngx-toastr';
-import {ReactiveFormsModule} from '@angular/forms'
-import {HttpClient, HttpClientModule} from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms'
+import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatInputModule } from "@angular/material/input"
+import {MatPaginatorModule} from '@angular/material/paginator'
+import {MatSortModule} from '@angular/material/sort'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import {MatTableModule} from '@angular/material/table'
+import { AdminComponent } from 'src/app/pages/admin/admin.component';
+import {MatButtonModule} from '@angular/material/button';
+import { UpdateComponent } from './pages/admin/update/update.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +42,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     ContactUsComponent,
     ForgetComponent,
     SignUpComponent,
+    AdminComponent,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,8 +52,17 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     ToastrModule.forRoot(),
     ReactiveFormsModule,
     HttpClientModule,
+    MatTableModule,
     BrowserAnimationsModule,
-
+    MatInputModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatCardModule,
+    MatSelectModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
