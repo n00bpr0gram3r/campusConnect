@@ -5,17 +5,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  baseAPI = 'https://campusconnect-json-server.onrender.com/users'
-  // baseAPI = 'http://localhost:3000/users'
-  // roleAPI='http://localhost:3000/role'
-  roleAPI = 'https://campusconnect-json-server.onrender.com/role'
+  // baseAPI = 'https://campusconnect-json-server.onrender.com/users'
+  baseAPI = 'http://localhost:3000/users'
+  roleAPI = 'http://localhost:3000/role'
+  // roleAPI = 'https://campusconnect-json-server.onrender.com/role'
   constructor(private http: HttpClient) { }
 
   //All User 
   getAll() {
     return this.http.get(this.baseAPI)
   }
-  getAllRole(){
+  getAllRole() {
     return this.http.get(this.roleAPI)
   }
   //Get User By Their ID
@@ -36,7 +36,9 @@ export class AuthService {
   isLoggedIn() {
     return sessionStorage.getItem('username') != null
   }
-
+  isAdmin() {
+    return sessionStorage.getItem('role') === 'admin'
+  }
   //Get role to validate the permissons
   getUserRole() {
     return sessionStorage.getItem('role') != null ? sessionStorage.getItem('role')?.toString() : ''

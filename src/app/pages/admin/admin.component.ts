@@ -49,7 +49,8 @@ export class AdminComponent {
         usercode:code
       }
     });
-    popup.afterClosed().subscribe(res=>{
+    popup.afterClosed().subscribe(res=>{  
+      this.getAllData();
     })
   }
 }

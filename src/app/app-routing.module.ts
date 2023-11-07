@@ -9,6 +9,7 @@ import { SignUpComponent } from 'src/app/pages/sign-up/sign-up.component';
 import { authGuard } from 'src/app/guard/auth.guard';
 import { AdminComponent } from 'src/app/pages/admin/admin.component';
 import { UpdateComponent } from 'src/app/pages/admin/update/update.component';
+import { adminGuard } from 'src/app/guard/admin/admin.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,8 +18,8 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent, canActivate: [authGuard] },
   { path: 'forget', component: ForgetComponent },
   { path: 'sign-up', component: SignUpComponent },
-  { path: 'admin', component: AdminComponent },
-  {path:'update', component:UpdateComponent}
+  { path: 'admin', component: AdminComponent, canActivate:[adminGuard] },
+  {path:'update', component:UpdateComponent, canActivate:[adminGuard]}
 ];
 
 @NgModule({
